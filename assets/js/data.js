@@ -232,44 +232,72 @@ const PUBLICATIONS = [
 
 const RESEARCH_DIRECTIONS = [
   {
-    title: "3D Geometric Processing and Reconstruction",
-    subtitle: "Point clouds · implicit surfaces · cross fields · geometric optimization",
+    title: "Geometric Modeling and 3D Reconstruction",
+    subtitle: "Shape representation · implicit fields · reconstruction · completion",
     image: "source_files/PCDreamer.png",
-    summary: "Developing geometry-aware learning and optimization methods for incomplete, noisy, and unstructured 3D data, including point cloud completion, upsampling, keypoint/correspondence estimation, wireframe extraction, and neural implicit reconstruction.",
-    keywords: ["Point Cloud Completion", "Upsampling", "Implicit Surface", "Wireframe Extraction", "Self-supporting Geometry"]
+    summary: "This area studies robust 3D shape reconstruction from incomplete, sparse, or noisy observations. Representative topics include multi-view diffusion priors for point cloud completion, implicit surface learning, geometry-aware reconstruction, and large-model-assisted 3D shape generation.",
+    keywords: ["3D Reconstruction", "Point Cloud Completion", "Implicit Surface", "Diffusion Prior", "Shape Generation"],
+    papers: ["PCDreamer", "Monge-Ampere Regularization", "Multi-task 3D Keypoint Saliency"]
   },
   {
-    title: "Intelligent Graphics and Image Processing",
-    subtitle: "Visual structure · image vectorization · recognition · generation",
-    image: "source_files/CGF2019.png",
-    summary: "Studying structure-preserving representation and learning for visual data, with attention to field-aligned image vectorization, skeleton-based recognition, contour/centerline priors, and image-conditioned 3D generation.",
-    keywords: ["Image Vectorization", "Dynamic Gesture Recognition", "Contour Prior", "Image-conditioned Generation", "Structure Learning"]
+    title: "Point Cloud Processing and Structure Enhancement",
+    subtitle: "Upsampling · keypoints · correspondence · wireframe structure",
+    image: "source_files/complex4_iter1_5_10.png",
+    summary: "This line focuses on improving the quality and structural fidelity of 3D point sets. It covers point cloud upsampling, keypoint and correspondence estimation, cross-field guided representation, and direction-field based wireframe extraction for complex CAD models.",
+    keywords: ["Point Cloud Upsampling", "Cross Field", "3D Keypoints", "Correspondence", "Wireframe Extraction"],
+    papers: ["iPUNet", "D-FRAME", "CAD Keypoint and Correspondence"]
   },
   {
-    title: "Multimodal Dental and Medical Data Processing",
-    subtitle: "Oral scan · CBCT · face photo · orthodontic planning",
+    title: "Digital Orthodontics and Dental Geometric Intelligence",
+    subtitle: "Tooth alignment · landmarks · treatment planning · dental geometry",
+    image: "source_files/Toothplan.png",
+    summary: "This area develops geometry-driven AI methods for digital orthodontics. Research topics include tooth segmentation and labeling, dental landmark and axis detection, automatic tooth alignment, orthodontic motion planning, attachment placement, and treatment monitoring.",
+    keywords: ["Digital Orthodontics", "Tooth Alignment", "Dental Landmarks", "Motion Planning", "Treatment Monitoring"],
+    papers: ["Tooth Alignment Network", "Potential Field Tooth Motion Planning", "Progressive Orthodontic Motion Planning"]
+  },
+  {
+    title: "Multimodal Medical Image and Oral Data Processing",
+    subtitle: "CBCT · oral scan · intraoral image · cephalometric image",
     image: "source_files/toothsegcvpr.png",
-    summary: "Building AI methods for digital orthodontics and dental intelligence, including 3D dental model segmentation, tooth landmark/axis detection, CBCT analysis, occlusal surface generation, tooth alignment, and progressive orthodontic motion planning.",
-    keywords: ["Digital Orthodontics", "3D Teeth Segmentation", "CBCT", "Motion Planning", "Medical Multimodal Learning"]
+    summary: "This direction studies multimodal perception for medical and dental data, especially the fusion of oral scans, CBCT, intraoral images, and facial or cephalometric images. The goal is to build reliable and explainable models for segmentation, landmark detection, surface generation, and clinical decision support.",
+    keywords: ["CBCT", "Oral Scan", "Medical Segmentation", "Cephalometric Landmark", "Multimodal Fusion"],
+    papers: ["Photo-Guided Tooth Segmentation", "ConsMatch", "Contour Makes It Stronger", "DentalGS"]
+  },
+  {
+    title: "Intelligent Graphics, Vision and Generative Modeling",
+    subtitle: "Image structure · vectorization · avatars · visual recognition",
+    image: "source_files/gsface.png",
+    summary: "This field investigates structure-aware visual computing, including image vectorization, skeleton-based gesture recognition, head avatar generation, and geometry-conditioned visual synthesis. The emphasis is on preserving visual structure while improving realism and controllability.",
+    keywords: ["Image Vectorization", "Visual Recognition", "Head Avatar", "Gaussian Representation", "Structure-aware Generation"],
+    papers: ["Field-aligned Quadrangulation", "Decoupled and Boosted Learning", "DoubleGaussianAvatar"]
+  },
+  {
+    title: "Fabrication-aware Geometric Design and Optimization",
+    subtitle: "Self-supporting geometry · arch beams · design constraints",
+    image: "source_files/tvcg2024.png",
+    summary: "This area connects geometric modeling with physical and fabrication constraints. It focuses on optimization methods for self-supporting surfaces, arch-beam structures, and design-aware geometric modeling that can support downstream manufacturing and engineering applications.",
+    keywords: ["Geometric Optimization", "Self-supporting Surface", "Arch Beam", "Fabrication", "CAD Design"],
+    papers: ["Design and Optimization of Self-Supporting Surfaces with Arch Beams"]
   }
 ];
 
 const PROJECTS = [
   {
     title: "PCDreamer",
-    tag: "CVPR 2025",
+    tag: "CVPR 2025 · 3D Reconstruction",
     image: "source_files/PCDreamer.png",
-    description: "Point cloud completion through multi-view diffusion priors. The project studies how generated multi-view cues can improve completion of severely incomplete 3D shapes.",
+    description: "Point cloud completion through multi-view diffusion priors. The system uses generative multi-view cues to improve completion quality for severely incomplete 3D shapes.",
     links: [
       {label: "Project Page", url: "https://gsw-d.github.io/PCDreamer/"},
-      {label: "Code", url: "https://github.com/GSW-D/PCDreamerCode"}
+      {label: "Code", url: "https://github.com/GSW-D/PCDreamerCode"},
+      {label: "Papers", url: "publications.html?filter=geometry"}
     ]
   },
   {
     title: "iPUNet",
-    tag: "TVCG 2023",
+    tag: "TVCG 2023 · Point Cloud Upsampling",
     image: "source_files/complex4_iter1_5_10.png",
-    description: "Iterative cross-field guided point cloud upsampling for preserving local structure and geometric fidelity in sparse 3D point sets.",
+    description: "Iterative cross-field guided point cloud upsampling for preserving local structure, edge features, and geometric fidelity in sparse 3D point sets.",
     links: [
       {label: "Project Page", url: "https://enigma-li.github.io/projects/iPUNet/iPUNet.html"},
       {label: "Code", url: "https://github.com/GSW-D/iPUNet"}
@@ -277,16 +305,63 @@ const PROJECTS = [
   },
   {
     title: "Digital Orthodontics and Dental Intelligence",
-    tag: "Medical AI",
+    tag: "Medical AI · Dental Geometry",
     image: "source_files/tooth_monitor.png",
-    description: "A long-term research line on oral scan analysis, CBCT/dental image processing, tooth alignment, treatment planning, and multimodal dental data fusion.",
-    links: [{label: "Selected Publications", url: "publications.html?filter=medical"}]
+    description: "A long-term research line on oral scan analysis, CBCT/dental image processing, tooth alignment, treatment planning, tooth motion monitoring, and multimodal dental data fusion.",
+    links: [
+      {label: "Selected Publications", url: "publications.html?filter=medical"},
+      {label: "Research Area", url: "research.html"}
+    ]
+  },
+  {
+    title: "Dental 3D Gaussian and Novel View Synthesis",
+    tag: "AAAI 2026 · DentalGS",
+    image: "source_files/3DGStooth.png",
+    description: "Pose-free 3D Gaussian splatting from a small number of intraoral images for dental novel view synthesis and digital oral visualization.",
+    links: [
+      {label: "Selected Publications", url: "publications.html?filter=medical"}
+    ]
   },
   {
     title: "Geometric Design and Self-supporting Structures",
-    tag: "TVCG 2024",
+    tag: "TVCG 2024 · Geometric Optimization",
     image: "source_files/tvcg2024.png",
-    description: "Geometry processing and optimization for fabrication-aware structures, including self-supporting surfaces and arch-beam based design.",
-    links: [{label: "Selected Publications", url: "publications.html?filter=geometry"}]
+    description: "Geometry processing and optimization for fabrication-aware structures, including self-supporting surfaces and arch-beam based geometric design.",
+    links: [
+      {label: "Selected Publications", url: "publications.html?filter=geometry"}
+    ]
+  },
+  {
+    title: "Structure-aware Graphics and Visual Computing",
+    tag: "Graphics · Vision · Generation",
+    image: "source_files/CGF2019.png",
+    description: "Research on visual structure representation, image vectorization, skeleton-based gesture recognition, and dynamic facial detail modeling.",
+    links: [
+      {label: "Selected Publications", url: "publications.html?filter=graphics"}
+    ]
+  }
+];
+
+const FUNDED_PROJECTS = [
+  {
+    title: "Event-stream Data Fusion for 3D Object Reconstruction in Complex Scenes",
+    source: "National Natural Science Foundation of China Youth Program",
+    period: "2026.01–2028.12",
+    role: "Principal Investigator",
+    description: "This project investigates 3D object reconstruction under challenging sensing conditions by integrating event-stream data with visual and geometric representations."
+  },
+  {
+    title: "3D Object Completion and Reconstruction with Multimodal Foundation-model Priors",
+    source: "Shandong Provincial Natural Science Foundation Youth Program",
+    period: "2026.01–2028.12",
+    role: "Principal Investigator",
+    description: "This project studies how multimodal large-model priors can support 3D object completion, reconstruction, and geometry-aware representation learning."
+  },
+  {
+    title: "Ministry of Education Talent Introduction Program",
+    source: "Ministry of Education Talent Program",
+    period: "2026.01–2028.12",
+    role: "Principal Investigator",
+    description: "This project supports research on intelligent graphics, geometric modeling and optimization, and multimodal data processing at Shandong University."
   }
 ];

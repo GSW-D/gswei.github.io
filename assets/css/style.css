@@ -6,9 +6,12 @@
   --muted: #5c667a;
   --light: #7a8499;
   --border: #e3e8f2;
-  --primary: #2357d6;
-  --primary-dark: #163c9a;
-  --accent: #14a3a3;
+  --primary: #9b1c1f;
+  --primary-dark: #6f1114;
+  --accent: #c9a35d;
+  --sdu-red: #9b1c1f;
+  --sdu-gold: #c9a35d;
+  --sdu-ink: #24324f;
   --shadow: 0 18px 45px rgba(23, 40, 77, 0.10);
   --radius: 22px;
   --max: 1160px;
@@ -19,9 +22,31 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--text);
-  background: radial-gradient(circle at 10% 0%, #e9f2ff 0, transparent 32rem), var(--bg);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(155, 28, 31, 0.12) 0, transparent 30rem),
+    radial-gradient(circle at 88% 10%, rgba(201, 163, 93, 0.16) 0, transparent 28rem),
+    linear-gradient(180deg, #fffaf8 0%, #f6f8fc 46%, #f8fbff 100%);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.68;
+  min-height: 100vh;
+  position: relative;
+}
+
+.site-header, main, .footer { position: relative; z-index: 1; }
+
+body::before {
+  content: "SDU  ·  SHANDONG UNIVERSITY  ·  学无止境  气有浩然";
+  position: fixed;
+  left: -8vw;
+  top: 40vh;
+  z-index: 0;
+  color: rgba(155, 28, 31, 0.045);
+  font-size: clamp(2.6rem, 8vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  transform: rotate(-8deg);
+  pointer-events: none;
 }
 
 a { color: var(--primary); text-decoration: none; }
@@ -34,7 +59,8 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(227, 232, 242, 0.9);
-  background: rgba(255, 255, 255, 0.90);
+  border-top: 4px solid var(--sdu-red);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
 }
 
@@ -53,8 +79,8 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   display: grid; place-items: center;
   color: white; font-weight: 800;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  box-shadow: 0 10px 25px rgba(35, 87, 214, 0.24);
+  background: linear-gradient(135deg, var(--sdu-red), var(--sdu-gold));
+  box-shadow: 0 10px 25px rgba(155, 28, 31, 0.22);
 }
 .brand-text strong { display: block; line-height: 1.1; }
 .brand-text span { color: var(--muted); font-size: 0.86rem; }
@@ -82,7 +108,9 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   gap: 34px;
   align-items: center;
   border: 1px solid var(--border);
-  background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(239,246,255,0.92));
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.98), rgba(255,247,242,0.94)),
+    radial-gradient(circle at 100% 0%, rgba(155, 28, 31, 0.12), transparent 32rem);
   border-radius: 34px;
   padding: 42px;
   box-shadow: var(--shadow);
@@ -97,7 +125,18 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: rgba(20, 163, 163, 0.12);
+  background: rgba(155, 28, 31, 0.10);
+}
+.hero-card:before {
+  content: "SDU";
+  position: absolute;
+  right: 38px;
+  bottom: -18px;
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 1;
+  font-weight: 900;
+  color: rgba(155, 28, 31, 0.045);
+  letter-spacing: -0.08em;
 }
 .hero h1 {
   margin: 0 0 4px;
@@ -105,7 +144,23 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   line-height: 1.02;
   letter-spacing: -0.06em;
 }
-.hero h2 { margin: 0 0 20px; font-size: 1.22rem; color: var(--muted); font-weight: 650; }
+.hero h2 { margin: 0 0 14px; font-size: 1.22rem; color: var(--muted); font-weight: 650; }
+.sdu-badge {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 18px;
+  color: var(--sdu-red);
+  font-weight: 850;
+}
+.sdu-badge span {
+  border: 1px solid rgba(155, 28, 31, 0.18);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  padding: 5px 11px;
+  box-shadow: 0 8px 18px rgba(155, 28, 31, 0.06);
+}
 .hero p { max-width: 780px; margin: 0 0 16px; color: var(--muted); }
 .hero-actions, .link-row, .tag-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .hero-actions { margin-top: 24px; }
@@ -162,8 +217,27 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 }
 .stat-card strong { display: block; font-size: 2rem; line-height: 1; letter-spacing: -0.04em; }
 .stat-card span { color: var(--muted); font-size: 0.92rem; }
+.sdu-strip {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(155, 28, 31, 0.16);
+  background: linear-gradient(90deg, rgba(155, 28, 31, 0.08), rgba(201, 163, 93, 0.12), rgba(255,255,255,0.74));
+  color: var(--muted);
+}
+.sdu-strip strong { color: var(--sdu-red); }
 
 .section { padding: 44px 0; }
+.section-alt {
+  background: linear-gradient(180deg, rgba(255,255,255,0.32), rgba(155,28,31,0.035));
+  border-top: 1px solid rgba(155, 28, 31, 0.08);
+  border-bottom: 1px solid rgba(155, 28, 31, 0.08);
+}
 .section-news-home { padding-top: 36px; }
 .section-head {
   display: flex;
@@ -180,6 +254,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .page-title .kicker { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8rem; }
 
 .card-grid, .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.research-grid { grid-template-columns: 1fr; }
 .research-card, .project-card, .pub-card, .info-card {
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.92);
@@ -187,10 +262,21 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   overflow: hidden;
   box-shadow: 0 8px 28px rgba(22, 37, 82, 0.06);
 }
-.research-card { display: grid; grid-template-columns: 220px 1fr; }
-.research-image, .project-image, .pub-image { min-height: 170px; background: linear-gradient(135deg, #edf4ff, #f8fbff); padding: 12px; }
+.research-card { display: grid; grid-template-columns: 260px 1fr; }
+.research-image, .project-image, .pub-image {
+  min-height: 185px;
+  background: linear-gradient(135deg, #fff7f2, #f8fbff);
+  padding: 14px;
+}
 .image-wrap { position: relative; display: grid; place-items: center; overflow: hidden; }
-.image-wrap img { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.35s ease; }
+.image-wrap img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 230px;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
 .research-card:hover img, .project-card:hover img, .pub-card:hover img { transform: scale(1.015); }
 .image-missing:before {
   content: "Image";
@@ -202,6 +288,14 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .research-content h3, .project-content h3, .pub-card h3 { margin: 0 0 8px; line-height: 1.28; }
 .research-content p, .project-content p, .pub-card p { color: var(--muted); margin: 8px 0; }
 .tag-row { margin-top: 14px; }
+.paper-hints {
+  margin-top: 13px;
+  padding-top: 13px;
+  border-top: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.paper-hints strong { color: var(--text); }
 .tag-row span, .project-tag, .pub-meta span {
   display: inline-flex;
   border: 1px solid var(--border);
@@ -253,6 +347,8 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 
 .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .info-card h3 { margin-top: 0; }
+.funded-card .project-tag { margin-bottom: 10px; }
+.role-line { font-weight: 800; color: var(--sdu-red) !important; }
 .info-card ul { margin: 10px 0 0; padding-left: 1.1rem; color: var(--muted); }
 
 .footer {

@@ -27,9 +27,9 @@ function renderNews(limit) {
 
 function publicationCard(pub) {
   const areaLabel = {
-    geometry: '3D Geometry',
-    medical: 'Medical AI',
-    graphics: 'Graphics & Vision'
+    geometry: 'Geometric Modeling',
+    medical: 'Dental & Medical AI',
+    graphics: 'Graphics, Vision & Generation'
   }[pub.area] || pub.area;
   return `
     <article class="pub-card" data-area="${pub.area}" data-year="${pub.year}">
@@ -95,6 +95,7 @@ function renderResearchDirections() {
         <h3>${item.title}</h3>
         <p>${item.summary}</p>
         <div class="tag-row">${item.keywords.map(k => `<span>${k}</span>`).join('')}</div>
+        ${item.papers ? `<div class="paper-hints"><strong>Representative works:</strong> ${item.papers.join(' · ')}</div>` : ''}
       </div>
     </article>
   `).join('');
@@ -112,6 +113,20 @@ function renderProjects() {
         <p>${project.description}</p>
         <div class="link-row">${linkList(project.links)}</div>
       </div>
+    </article>
+  `).join('');
+}
+
+function renderFundedProjects() {
+  const root = $('#funded-project-grid');
+  if (!root || typeof FUNDED_PROJECTS === 'undefined') return;
+  root.innerHTML = FUNDED_PROJECTS.map(project => `
+    <article class="info-card funded-card">
+      <span class="project-tag">${project.period}</span>
+      <h3>${project.title}</h3>
+      <p><strong>${project.source}</strong></p>
+      <p>${project.description}</p>
+      <p class="role-line">Role: ${project.role}</p>
     </article>
   `).join('');
 }
@@ -139,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFeaturedPublications();
   renderResearchDirections();
   renderProjects();
+  renderFundedProjects();
   renderStats();
   initMobileNav();
 });
