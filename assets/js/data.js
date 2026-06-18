@@ -7,7 +7,7 @@ const SITE = {
   email2: "gswei@sdu.edu.cn",
   github: "https://github.com/GSW-D",
   scholar: "https://scholar.google.com.hk/citations?hl=zh-CN&user=Sf6-vDIAAAAJ",
-  photo: "source_files/gswei.jpg"
+  photo: "source_files/gswei1.jpg"
 };
 
 const NEWS = [
