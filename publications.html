@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Publications of Guangshun Wei, grouped by 3D geometric processing, graphics/vision, and medical data processing.">
+  <title>Publications | Guangshun Wei</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">GW</span><span class="brand-text"><strong>Guangshun Wei</strong><span>Shandong University</span></span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="teaching-service.html">Teaching & Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <span class="kicker">Publications</span>
+        <h1>Selected papers</h1>
+        <p>Publications are grouped into 3D geometric processing, multimodal dental/medical AI, and graphics/vision. Use the filters below to view papers by research area.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-buttons" aria-label="Publication filters">
+            <button type="button" class="active" data-filter="all">All</button>
+            <button type="button" data-filter="geometry">3D Geometric Processing</button>
+            <button type="button" data-filter="medical">Medical Data Processing</button>
+            <button type="button" data-filter="graphics">Graphics & Vision</button>
+          </div>
+          <span id="publication-count" class="count"></span>
+        </div>
+        <div id="publication-list" class="pub-list"></div>
+        <p style="color: var(--muted); margin-top: 18px;">* indicates equal contribution; † indicates corresponding author. Please add or revise paper/project/code links in <code>assets/js/data.js</code> when new resources become available.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>© 2026 Guangshun Wei.</span><span><a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Sf6-vDIAAAAJ" target="_blank" rel="noopener">Google Scholar</a></span></div></footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
