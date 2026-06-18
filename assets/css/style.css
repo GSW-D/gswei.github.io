@@ -135,7 +135,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   box-shadow: 0 22px 55px rgba(22, 37, 82, 0.18);
   background: linear-gradient(135deg, #dfeaff, #f4f7ff);
 }
-.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+.profile-photo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; background: #fff; }
 .profile-list {
   margin: 18px 0 0 auto;
   padding: 18px;
@@ -164,6 +164,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .stat-card span { color: var(--muted); font-size: 0.92rem; }
 
 .section { padding: 44px 0; }
+.section-news-home { padding-top: 36px; }
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -187,10 +188,10 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   box-shadow: 0 8px 28px rgba(22, 37, 82, 0.06);
 }
 .research-card { display: grid; grid-template-columns: 220px 1fr; }
-.research-image, .project-image, .pub-image { min-height: 160px; background: linear-gradient(135deg, #edf4ff, #f8fbff); }
+.research-image, .project-image, .pub-image { min-height: 170px; background: linear-gradient(135deg, #edf4ff, #f8fbff); padding: 12px; }
 .image-wrap { position: relative; display: grid; place-items: center; overflow: hidden; }
-.image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
-.research-card:hover img, .project-card:hover img, .pub-card:hover img { transform: scale(1.035); }
+.image-wrap img { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.35s ease; }
+.research-card:hover img, .project-card:hover img, .pub-card:hover img { transform: scale(1.015); }
 .image-missing:before {
   content: "Image";
   color: var(--light);
@@ -214,7 +215,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 
 .pub-list { display: grid; gap: 16px; }
 .pub-card { display: grid; grid-template-columns: 240px 1fr; }
-.pub-image { min-height: 154px; }
+.pub-image { min-height: 170px; }
 .pub-meta { display: flex; gap: 8px; margin-bottom: 8px; }
 .pub-card h3 { font-size: 1.08rem; }
 .authors { font-size: 0.94rem; }
