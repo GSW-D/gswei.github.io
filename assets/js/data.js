@@ -11,6 +11,7 @@ const SITE = {
 };
 
 const NEWS = [
+  {date: "06/2026", text: "Three papers were accepted by MICCAI 2026. Congrats to Zhang Kang, Shaojie, and Zhao Xin."},
   {date: "03/2026", text: "One paper was accepted by IEEE Transactions on Medical Imaging (TMI). Congrats to Yeying."},
   {date: "02/2026", text: "One paper was accepted by CVPR 2026. Congrats to Shaojie."},
   {date: "01/2026", text: "One paper was accepted by Computational Visual Media Conference 2026. Congrats to Fangtian."},
