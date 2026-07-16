@@ -29,6 +29,24 @@ const NEWS = [
 
 const PUBLICATIONS = [
   {
+    title: "TSegAgent: Zero-Shot Tooth Segmentation via Geometry-Aware Vision-Language Agents",
+    authors: "Shaojie Zhuang, Lu Yin, Guangshun Wei, Yunpeng Li, Xilu Wang, and Yuanfeng Zhou",
+    venue: "MICCAI, 2026",
+    year: 2026,
+    area: "medical",
+    image: "source_files/TSegAgent.png",
+    links: [{label: "Paper", url: ""}]
+  },
+  {
+    title: "DentMamba: An Anatomy-Aware Global-Local Hybrid Network for Large-Scale Multi-Class Dental Disease Detection",
+    authors: "Kang Zhang, Shaojie Zhuang, Guangshun Wei†, and Yuanfeng Zhou†",
+    venue: "MICCAI, 2026",
+    year: 2026,
+    area: "medical",
+    image: "source_files/DentMamba.png",
+    links: [{label: "Paper", url: ""}]
+  },
+  {
     title: "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
     authors: "Chuanxiang Yang, Junhui Hou, Yuan Liu, Siyu Ren, Guangshun Wei, Taku Komura, Yuanfeng Zhou, Wenping Wang",
     venue: "Siggraph, 2026",
