@@ -29,6 +29,16 @@ const NEWS = [
 
 const PUBLICATIONS = [
   {
+    title: "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+    authors: "Chuanxiang Yang, Junhui Hou, Yuan Liu, Siyu Ren, Guangshun Wei, Taku Komura, Yuanfeng Zhou, Wenping Wang",
+    venue: "Siggraph, 2026",
+    year: 2026,
+    area: "geometry",
+    highlight: true,
+    image: "source_files/sand.png",
+    links: [{label: "Paper", url: "#"}]
+  },
+  {
     title: "DoubleGaussianAvatar: Double Gaussians for Driveable Head Avatars with Dynamic Facial Details",
     authors: "Fangtian Liang, Guangshun Wei, Pengfei Wang, Yuanfeng Zhou",
     venue: "International Conference on Computational Visual Media, 2026",
