@@ -29,6 +29,15 @@ const NEWS = [
 
 const PUBLICATIONS = [
   {
+    title: "HiQu3DGen: Consistent Multi-View Guided High Quality 3D Asset Generation",
+    authors: "Zhenyu Li, Shanshan Gao, Guangshun Wei†, Jianing Zhang, Wenping Wang, Yuanfeng Zhou†",
+    venue: "ACM MM, 2026",
+    year: 2026,
+    area: "geometry",
+    image: "source_files/HiQu3DGen.png",
+    links: [{label: "Paper", url: ""}]
+  },
+  {
     title: "TSegAgent: Zero-Shot Tooth Segmentation via Geometry-Aware Vision-Language Agents",
     authors: "Shaojie Zhuang, Lu Yin, Guangshun Wei, Yunpeng Li, Xilu Wang, and Yuanfeng Zhou",
     venue: "MICCAI, 2026",
