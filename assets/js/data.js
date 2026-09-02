@@ -48,7 +48,7 @@ const PUBLICATIONS = [
   },
   {
     title: "DentMamba: An Anatomy-Aware Global-Local Hybrid Network for Large-Scale Multi-Class Dental Disease Detection",
-    authors: "Kang Zhang, Shaojie Zhuang, Guangshun Wei†, and Yuanfeng Zhou†",
+    authors: "Kang Zhang, Shaojie Zhuang, Guangshun Wei, and Yuanfeng Zhou†",
     venue: "MICCAI, 2026",
     year: 2026,
     area: "medical",
