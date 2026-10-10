@@ -11,6 +11,7 @@ const SITE = {
 };
 
 const NEWS = [
+  {date: "10/2026", text: "One paper was accepted by PG 2026. Congrats to Zihan."},
   {date: "09/2026", text: "One paper was accepted by CGF 2026. Congrats to Zhihao."},
   {date: "07/2026", text: "One paper was accepted by ACM Multimedia 2026. Congrats to Zhenyu."},
   {date: "06/2026", text: "Two papers were accepted by MICCAI 2026. Congrats to Shaojie, Zhang Kang."},
@@ -29,6 +30,15 @@ const NEWS = [
 ];
 
 const PUBLICATIONS = [
+  {
+    title: "An Electrostatic Field-Driven Method for Point Cloud Normal Orientation",
+    authors: "Wang, Zihan, Long, Ma, Wei, Guangshun, Li, Jiaze, and Zhou, Yuanfeng",
+    venue: "PG, 2026",
+    year: 2026,
+    area: "geometry",
+    image: "source_files/EFD.png",
+    links: [{label: "Paper", url: ""}]
+  },
   {
     title: "PDRGS: Probabilistic Distribution Reshaping for Specular Geometry Reconstruction in 3D Gaussian Splatting",
     authors: "Zhihao Li, Chen Wang, Pengfei Wang, Guangshun Wei and Yuanfeng Zhou",
