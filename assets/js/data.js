@@ -11,6 +11,7 @@ const SITE = {
 };
 
 const NEWS = [
+  {date: "09/2026", text: "One paper was accepted by CGF 2026. Congrats to Zhihao."},
   {date: "07/2026", text: "One paper was accepted by ACM Multimedia 2026. Congrats to Zhenyu."},
   {date: "06/2026", text: "Two papers were accepted by MICCAI 2026. Congrats to Shaojie, Zhang Kang."},
   {date: "03/2026", text: "One paper was accepted by IEEE Transactions on Medical Imaging (TMI). Congrats to Yeying."},
@@ -29,13 +30,22 @@ const NEWS = [
 
 const PUBLICATIONS = [
   {
+    title: "PDRGS: Probabilistic Distribution Reshaping for Specular Geometry Reconstruction in 3D Gaussian Splatting",
+    authors: "Zhihao Li, Chen Wang, Pengfei Wang, Guangshun Wei and Yuanfeng Zhou",
+    venue: "CGF, 2026",
+    year: 2026,
+    area: "geometry",
+    image: "source_files/PDRGS.png",
+    links: [{label: "Paper", url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70650"}]
+  },
+  {
     title: "HiQu3DGen: Consistent Multi-View Guided High Quality 3D Asset Generation",
     authors: "Zhenyu Li, Shanshan Gao, Guangshun Wei†, Jianing Zhang, Wenping Wang, Yuanfeng Zhou†",
     venue: "ACM MM, 2026",
     year: 2026,
     area: "geometry",
     image: "source_files/HiQu3DGen.png",
-    links: [{label: "Paper", url: ""}]
+    links: [{label: "Paper", url: "https://lzy-aigc.github.io/HiQu3DGen/"}]
   },
   {
     title: "TSegAgent: Zero-Shot Tooth Segmentation via Geometry-Aware Vision-Language Agents",
@@ -44,7 +54,7 @@ const PUBLICATIONS = [
     year: 2026,
     area: "medical",
     image: "source_files/TSegAgent.png",
-    links: [{label: "Paper", url: ""}]
+    links: [{label: "Paper", url: "https://papers.miccai.org/miccai-2026/1094-Paper0737.html"}]
   },
   {
     title: "DentMamba: An Anatomy-Aware Global-Local Hybrid Network for Large-Scale Multi-Class Dental Disease Detection",
@@ -53,7 +63,7 @@ const PUBLICATIONS = [
     year: 2026,
     area: "medical",
     image: "source_files/DentMamba.png",
-    links: [{label: "Paper", url: ""}]
+    links: [{label: "Paper", url: "https://papers.miccai.org/miccai-2026/paper/0668_paper.pdf"}]
   },
   {
     title: "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
@@ -63,7 +73,7 @@ const PUBLICATIONS = [
     area: "geometry",
     highlight: true,
     image: "source_files/sand.png",
-    links: [{label: "Paper", url: "#"}]
+    links: [{label: "Paper", url: "https://dl.acm.org/doi/10.1145/3811341"},{label: "Project", url: "https://chuanxiang-yang.github.io/SAND/"}]
   },
   {
     title: "DoubleGaussianAvatar: Double Gaussians for Driveable Head Avatars with Dynamic Facial Details",
@@ -73,7 +83,7 @@ const PUBLICATIONS = [
     area: "geometry",
     highlight: true,
     image: "source_files/gsface.png",
-    links: [{label: "Paper", url: "#"}]
+    links: [{label: "Paper", url: "https://iccvm.org/2026/files/papers/55.pdf"}]
   },
   {
     title: "Progressive Orthodontic Motion Planning based on Hierarchical Diffusion Transformer",
@@ -83,7 +93,7 @@ const PUBLICATIONS = [
     area: "medical",
     highlight: true,
     image: "source_files/tmi-yeying.png",
-    links: [{label: "Paper", url: "#"}, {label: "Project", url: "#"}, {label: "Code", url: "#"}]
+    links: [{label: "Paper", url: "https://ieeexplore.ieee.org/document/11449349"}, {label: "Project", url: "#"}, {label: "Code", url: "#"}]
   },
   {
     title: "Photo-Guided Tooth Segmentation on 3D Oral Scan Model",
@@ -93,7 +103,7 @@ const PUBLICATIONS = [
     area: "medical",
     highlight: true,
     image: "source_files/toothsegcvpr.png",
-    links: [{label: "Paper", url: "#"}, {label: "Project", url: "#"}, {label: "Code", url: "#"}]
+    links: [{label: "Paper", url: "https://cvpr.thecvf.com/virtual/2026/poster/36682"}, {label: "Project", url: "#"}, {label: "Code", url: "https://cvpr.thecvf.com/virtual/2026/poster/36682"}]
   },
   {
     title: "D-FRAME: Direction-Field-Based Wireframe Extraction for Complex CAD Models",
